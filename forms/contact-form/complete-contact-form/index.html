@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- Indicates that this document uses HTML5 -->
+<html lang="en"> <!-- Defines the language of the page (YOU CAN CHANGE TO "pt") -->
+<head>
+  <meta charset="UTF-8"> <!-- Sets the character encoding (UTF-8 is the recommended standard) -->
+  <title>Contact Form</title> <!-- Title shown in the browser tab (YOU CAN CHANGE TO YOUR SITE NAME) -->
+  <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file. YOU CAN CHANGE THE FILE NAME IF YOU WANT -->
+</head>
+<body>
+  <div class="container"> <!-- Main div that contains the form. Styling is in the CSS -->
+    <h1>Contact Us</h1> <!-- Form title. YOU CAN CHANGE THE TEXT -->
+
+    <form action="#" method="post"> <!-- "action" defines where the data will be sent (PUT YOUR BACKEND HERE)
+        "method=post" sends the data securely -->
+
+      <div class="form-group"> <!-- Field group (used for spacing and organization) -->
+        <label for="name">Name<span class="required">*</span></label> <!-- Label linked to the input. * indicates required field -->
+        <input type="text" id="name" name="name" placeholder="John Doe" required> <!-- Text field. "placeholder" is the hint text.
+          "required" forces the user to fill it -->
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email<span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required> <!-- type="email" automatically validates email format -->
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone <span class="note">(optional)</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="+351 912 345 678"> <!-- Optional field. YOU CAN REMOVE OR CHANGE THE PLACEHOLDER -->
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject<span class="required">*</span></label>
+        <input type="text" id="subject" name="subject" placeholder="How can we help you?" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message<span class="required">*</span></label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea> <!-- "textarea" allows long messages -->
+      </div>
+
+      <!-- PRIVACY POLICY SECTION -->
+      <div class="privacy-wrapper"> <!-- Box that wraps the checkbox and the privacy text -->
+        <input type="checkbox" id="privacy" name="privacy" required> <!-- REQUIRED CHECKBOX. The user must accept -->
+        <label for="privacy" class="privacy-text"> <!-- Clickable text linked to the checkbox -->
+          I agree to the <a href="#" target="_blank">Privacy Policy</a> <!-- Opens the link in a new tab. REPLACE "#" WITH YOUR REAL PAGE -->
+          and consent to the processing of my personal data for the purpose of receiving a response to my inquiry.
+          I understand that I may request access, correction, or deletion of my data at any time. <!-- Professional GDPR-compliant text. YOU CAN CUSTOMIZE -->
+        </label>
+      </div>
+
+      <button type="submit">Send Message</button> <!-- Submit button. YOU CAN CHANGE THE TEXT -->
+    </form>
+  </div>
+</body>
+</html>
