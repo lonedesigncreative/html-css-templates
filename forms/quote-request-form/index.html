@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- Indicates that this document uses HTML5 -->
+<html lang="en"> <!-- Defines the language of the page -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding -->
+    <title>Budget Request Form</title> <!-- Title shown in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file -->
+</head>
+
+<body>
+    <div class="container"> <!-- Main container that holds the form -->
+        <h1>Request a Quote</h1> <!-- Form title -->
+
+        <form action="#" method="post"> <!-- "action" defines where the data will be sent (INSERT YOUR BACKEND)
+            "method=post" sends the data securely -->
+
+            <div class="form-group"> <!-- Field group for layout and spacing -->
+                <label for="name">Name<span class="required">*</span></label> <!-- Label linked to the input -->
+                <input type="text" id="name" name="name" placeholder="Your full name" required> <!-- Required text field -->
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required> <!-- Email validation -->
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone (optional)</label> <!-- Optional phone field -->
+                <input type="tel" id="phone" name="phone" placeholder="+351 912 345 678"> <!-- Optional field -->
+            </div>
+
+            <div class="form-group"> <!-- SERVICE TYPE -->
+                <label for="service">Service Needed<span class="required">*</span></label> <!-- Required field -->
+                <input type="text" id="service" name="service" placeholder="Website, branding, photography, etc." required>
+            </div>
+
+            <div class="form-group"> <!-- BUDGET RANGE -->
+                <label for="budget">Estimated Budget (optional)</label>
+                <input type="text" id="budget" name="budget" placeholder="€300 - €1.000">
+            </div>
+
+            <div class="form-group"> <!-- DEADLINE -->
+                <label for="deadline">Deadline (optional)</label>
+                <input type="text" id="deadline" name="deadline" placeholder="Example: 2 weeks, 1 month">
+            </div>
+
+            <div class="form-group"> <!-- PROJECT DESCRIPTION -->
+                <label for="message">Project Details<span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Describe your project in detail..." required></textarea>
+            </div>
+
+            <!-- PRIVACY POLICY SECTION -->
+            <div class="privacy-wrapper"> <!-- Box that groups the checkbox and text -->
+                <input type="checkbox" id="privacy" name="privacy" required> <!-- Required checkbox -->
+                <label for="privacy" class="privacy-text"> <!-- Clickable text linked to the checkbox -->
+                    I confirm that I have read and accept the <a href="#" target="_blank">Privacy Policy</a> <!-- Replace "#" with your real link -->
+                    and authorize the processing of my personal data for the purpose of receiving a quote.
+                    I understand that I may request access, correction, or deletion of my data at any time. <!-- GDPR‑compliant text -->
+                </label>
+            </div>
+
+            <button type="submit">Submit Request</button> <!-- Submit button -->
+        </form>
+    </div>
+</body>
+</html>
