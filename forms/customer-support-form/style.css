@@ -1,0 +1,216 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif; /* YOU CAN CHANGE THE FONT */
+    background: linear-gradient(135deg, #dfe7f3, #f8fafc); /* PAGE BACKGROUND COLORS (YOU CAN CHANGE) */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    color: #333; /* DEFAULT TEXT COLOR (YOU CAN CHANGE) */
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    max-width: 650px; /* FORM WIDTH (YOU CAN CHANGE) */
+    width: 90%; /* Responsive width */
+    margin: 60px auto; /* Centers the form (YOU CAN CHANGE SPACING) */
+    background: #ffffff; /* FORM BACKGROUND COLOR (YOU CAN CHANGE) */
+    padding: 45px 50px; /* INNER SPACING (YOU CAN CHANGE) */
+    border-radius: 18px; /* ROUNDED CORNERS (YOU CAN CHANGE) */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.10); /* FORM SHADOW (YOU CAN CHANGE) */
+    animation: fadeIn 0.6s ease; /* Fade-in animation */
+}
+
+/* ===== FADE-IN ANIMATION ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); } /* Start invisible */
+    to { opacity: 1; transform: translateY(0); } /* End visible */
+}
+
+/* ===== FORM TITLE ===== */
+h1 {
+    text-align: center; /* Centers the title */
+    font-size: 30px; /* TITLE SIZE (YOU CAN CHANGE) */
+    margin-bottom: 35px; /* SPACE BELOW TITLE */
+    color: #1a3d6f; /* TITLE COLOR (YOU CAN CHANGE) */
+    font-weight: 700; /* Bold */
+}
+
+/* ===== FORM GROUP WRAPPER ===== */
+.form-group {
+    margin-bottom: 22px; /* SPACE BETWEEN FIELDS (YOU CAN CHANGE) */
+}
+
+/* ===== LABELS ===== */
+.form-group label {
+    display: block; /* Forces label to be on its own line */
+    font-size: 15px; /* LABEL TEXT SIZE (YOU CAN CHANGE) */
+    margin-bottom: 8px; /* SPACE BELOW LABEL */
+    font-weight: 600; /* Bold label */
+    color: #1a1a1a; /* LABEL COLOR (YOU CAN CHANGE) */
+}
+
+/* ===== RED ASTERISKS ===== */
+.required {
+    color: #d00; /* ASTERISK COLOR (YOU CAN CHANGE) */
+}
+
+/* ===== INPUTS, TEXTAREAS, SELECTS ===== */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%; /* Full width */
+    padding: 14px 16px; /* INNER SPACING (YOU CAN CHANGE) */
+    font-size: 15px; /* TEXT SIZE (YOU CAN CHANGE) */
+    border: 1.5px solid #cfd6e0; /* BORDER COLOR (YOU CAN CHANGE) */
+    border-radius: 10px; /* ROUNDED CORNERS (YOU CAN CHANGE) */
+    background: #fdfdfd; /* FIELD BACKGROUND COLOR (YOU CAN CHANGE) */
+    transition: all 0.25s ease; /* Smooth animation */
+    box-sizing: border-box; /* Prevents size issues */
+}
+
+/* ===== FOCUS EFFECT ===== */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4a90e2; /* BORDER COLOR ON FOCUS (YOU CAN CHANGE) */
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.25); /* OUTLINE GLOW (YOU CAN CHANGE) */
+    outline: none; /* Removes default outline */
+}
+
+/* ===== TEXTAREA HEIGHT ===== */
+textarea {
+    min-height: 150px; /* YOU CAN CHANGE HEIGHT */
+    resize: vertical; /* Allows resizing only vertically */
+}
+
+/* ===== FILE UPLOAD AREA ===== */
+.file-upload-group {
+    margin-bottom: 25px; /* SPACE BELOW UPLOAD AREA */
+}
+
+.file-drop-area {
+    position: relative;
+    border: 2px dashed #9bb3d6; /* BORDER COLOR (YOU CAN CHANGE) */
+    background: #f7faff; /* BACKGROUND COLOR (YOU CAN CHANGE) */
+    padding: 30px; /* INNER SPACING */
+    border-radius: 12px; /* ROUNDED CORNERS */
+    text-align: center; /* Centers content */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.file-drop-area:hover {
+    background: #eef4ff; /* HOVER BACKGROUND COLOR (YOU CAN CHANGE) */
+    border-color: #4a90e2; /* HOVER BORDER COLOR */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08); /* HOVER SHADOW */
+}
+
+.file-icon {
+    font-size: 32px; /* ICON SIZE (YOU CAN CHANGE) */
+    display: block;
+    margin-bottom: 10px;
+    color: #1a3d6f; /* ICON COLOR (YOU CAN CHANGE) */
+}
+
+.file-message {
+    font-size: 15px; /* TEXT SIZE */
+    color: #1a1a1a; /* TEXT COLOR */
+    font-weight: 500;
+}
+
+.file-drop-area input[type="file"] {
+    position: absolute; /* Makes input cover the whole area */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Invisible but clickable */
+    cursor: pointer;
+}
+
+.file-hint {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px; /* SMALL TEXT SIZE */
+    color: #666; /* TEXT COLOR */
+}
+
+/* ===== PRIVACY POLICY SECTION ===== */
+.privacy-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px; /* SPACE BETWEEN CHECKBOX AND TEXT */
+    margin: 25px 0;
+    padding: 15px;
+    background: #f4f7fb; /* BACKGROUND COLOR (YOU CAN CHANGE) */
+    border-radius: 12px;
+    border: 1px solid #d9e2ef; /* BORDER COLOR */
+}
+
+.privacy-wrapper input[type="checkbox"] {
+    margin-top: 4px;
+    width: 20px; /* CHECKBOX SIZE */
+    height: 20px;
+    cursor: pointer;
+}
+
+.privacy-text {
+    font-size: 14px; /* TEXT SIZE */
+    line-height: 1.55;
+    cursor: pointer;
+    color: #333; /* TEXT COLOR */
+}
+
+.privacy-text a {
+    color: #1a3d6f; /* LINK COLOR (YOU CAN CHANGE) */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.privacy-text a:hover {
+    text-decoration: underline; /* HOVER EFFECT */
+}
+
+/* ===== BLUE MODERN BUTTON ===== */
+.modern-btn {
+    width: 100%; /* FULL WIDTH BUTTON */
+    padding: 16px; /* BUTTON HEIGHT (YOU CAN CHANGE) */
+    background: #1a3d6f; /* BUTTON COLOR (YOU CAN CHANGE) */
+    color: #ffffff; /* TEXT COLOR (YOU CAN CHANGE) */
+    border: none;
+    border-radius: 12px; /* ROUNDED CORNERS */
+    font-size: 18px; /* TEXT SIZE (YOU CAN CHANGE) */
+    font-weight: 700; /* BOLD TEXT */
+    cursor: pointer;
+    letter-spacing: 0.5px; /* SPACING BETWEEN LETTERS */
+    box-shadow: 0 6px 16px rgba(26, 61, 111, 0.25); /* BUTTON SHADOW */
+    transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+/* BUTTON HOVER */
+.modern-btn:hover {
+    background: #16345c; /* DARKER BLUE ON HOVER (YOU CAN CHANGE) */
+    transform: translateY(-3px); /* LIFT EFFECT */
+    box-shadow: 0 10px 22px rgba(26, 61, 111, 0.35); /* HOVER SHADOW */
+}
+
+/* BUTTON CLICK */
+.modern-btn:active {
+    transform: translateY(0); /* RETURNS TO NORMAL */
+    box-shadow: 0 4px 10px rgba(26, 61, 111, 0.25); /* CLICK SHADOW */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px; /* SMALLER PADDING ON MOBILE */
+    }
+
+    h1 {
+        font-size: 24px; /* SMALLER TITLE ON MOBILE */
+    }
+
+    .modern-btn {
+        font-size: 16px; /* SMALLER BUTTON TEXT */
+    }
+}
