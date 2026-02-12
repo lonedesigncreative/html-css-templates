@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!-- Indicates that this document uses HTML5 -->
+<html lang="en"> <!-- Defines the language of the page -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding -->
+    <title>Lead Capture Form</title> <!-- Title shown in the browser tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file -->
+</head>
+
+<body>
+    <div class="container"> <!-- Main container that holds the form -->
+        <h1>Join Our Newsletter</h1> <!-- Lead generation headline -->
+
+        <form action="#" method="post"> <!-- Form submission (replace "#" with backend URL) -->
+
+            <div class="form-group"> <!-- Name field -->
+                <label for="name">Full Name<span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group"> <!-- Email field -->
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <!-- PRIVACY POLICY SECTION -->
+            <div class="privacy-wrapper">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy" class="privacy-text">
+                    I agree to the <a href="#" target="_blank">Privacy Policy</a>
+                    and consent to receiving marketing communications and updates.
+                </label>
+            </div>
+
+            <button type="submit">Sign Me Up</button> <!-- CTA button -->
+        </form>
+    </div>
+</body>
+</html>
