@@ -1,77 +1,101 @@
-<!DOCTYPE html> <!-- Indicates that this document uses HTML5 -->
-<html lang="en"> <!-- Defines the language of the page -->
+<!DOCTYPE html> <!-- Declares HTML5 document type (DO NOT CHANGE) -->
+<html lang="en"> <!-- Sets page language (YOU CAN CHANGE "en" TO "pt") -->
 <head>
-    <meta charset="UTF-8"> <!-- Sets the character encoding -->
-    <title>Budget Request Form</title> <!-- Title shown in the browser tab -->
-    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file -->
+    <meta charset="UTF-8"> <!-- Character encoding (DO NOT CHANGE) -->
+    <title>Customer Support</title> <!-- Browser tab title (YOU CAN CHANGE THIS TEXT) -->
+    <link rel="stylesheet" href="style.css"> <!-- Links CSS file (YOU CAN CHANGE FILE NAME) -->
 </head>
 
-<body>
-    <div class="container"> <!-- Main container that holds the form -->
-        <h1>Request a Quote</h1> <!-- Form title -->
+<body> <!-- Page body starts -->
+    <div class="container"> <!-- Main centered container (STYLE IN CSS) -->
+
+        <h1>Customer Support</h1> <!-- Main title (YOU CAN CHANGE THIS TEXT) -->
 
         <form action="#" method="post" enctype="multipart/form-data">
-            <!-- "enctype" is required to allow file uploads -->
+            <!-- "action" is where the form sends data (YOU MUST CHANGE "#" TO YOUR BACKEND URL)
+                 "enctype" REQUIRED for file uploads -->
 
-            <div class="form-group"> <!-- Name field -->
-                <label for="name">Name<span class="required">*</span></label>
+            <!-- NAME FIELD -->
+            <div class="form-group"> <!-- Wrapper for spacing -->
+                <label for="name">Full Name<span class="required">*</span></label>
+                <!-- Label text (YOU CAN CHANGE "Full Name") -->
+                <!-- <span class="required">*</span> = red asterisk -->
                 <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <!-- Placeholder text (YOU CAN CHANGE THIS) -->
             </div>
 
-            <div class="form-group"> <!-- Email field -->
+            <!-- EMAIL FIELD -->
+            <div class="form-group">
                 <label for="email">Email<span class="required">*</span></label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                <!-- YOU CAN CHANGE THE LABEL TEXT -->
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                <!-- YOU CAN CHANGE THE PLACEHOLDER -->
             </div>
 
-            <div class="form-group"> <!-- Phone field -->
-                <label for="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone" placeholder="+351 912 345 678">
+            <!-- SUBJECT FIELD -->
+            <div class="form-group">
+                <label for="subject">Subject<span class="required">*</span></label>
+                <!-- YOU CAN CHANGE THE LABEL TEXT -->
+                <input type="text" id="subject" name="subject" placeholder="Example: Login issue" required>
+                <!-- YOU CAN CHANGE THE PLACEHOLDER -->
             </div>
 
-            <div class="form-group"> <!-- Service needed -->
-                <label for="service">Service Needed<span class="required">*</span></label>
-                <input type="text" id="service" name="service" placeholder="Website, branding, photography, etc." required>
+            <!-- CATEGORY DROPDOWN -->
+            <div class="form-group">
+                <label for="category">Issue Category<span class="required">*</span></label>
+                <!-- YOU CAN CHANGE THE LABEL TEXT -->
+                <select id="category" name="category" required>
+                    <!-- Dropdown options (YOU CAN CHANGE OR ADD OPTIONS) -->
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="technical">Technical Issue</option>
+                    <option value="billing">Billing & Payments</option>
+                    <option value="account">Account & Access</option>
+                    <option value="product">Product or Service</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
 
-            <div class="form-group"> <!-- Estimated budget -->
-                <label for="budget">Estimated Budget (optional)</label>
-                <input type="text" id="budget" name="budget" placeholder="Example: €300 - €1,000">
-            </div>
-
-            <div class="form-group"> <!-- Deadline -->
-                <label for="deadline">Deadline (optional)</label>
-                <input type="text" id="deadline" name="deadline" placeholder="Example: 2 weeks, 1 month, urgent">
-            </div>
-
-            <!-- MODERN FILE UPLOAD AREA -->
+            <!-- FILE UPLOAD AREA -->
             <div class="form-group file-upload-group">
                 <label for="file">Attach Files (optional)</label>
+                <!-- YOU CAN CHANGE THIS TEXT -->
 
-                <div class="file-drop-area">
-                    <span class="file-icon">📎</span>
+                <div class="file-drop-area"> <!-- Styled drop zone -->
+                    <span class="file-icon">📎</span> <!-- YOU CAN CHANGE THE ICON -->
                     <span class="file-message">Drag files here or click to select</span>
+                    <!-- YOU CAN CHANGE THIS TEXT -->
                     <input type="file" id="file" name="file[]" multiple>
+                    <!-- "multiple" allows multiple files (YOU CAN REMOVE IT) -->
                 </div>
 
                 <small class="file-hint">Allowed formats: PDF, JPG, PNG, DOCX (max. 10MB each)</small>
+                <!-- YOU CAN CHANGE THIS TEXT -->
             </div>
 
-            <div class="form-group"> <!-- Project details -->
-                <label for="message">Project Details<span class="required">*</span></label>
-                <textarea id="message" name="message" placeholder="Describe your project in as much detail as possible..." required></textarea>
+            <!-- MESSAGE FIELD -->
+            <div class="form-group">
+                <label for="message">Describe the Issue<span class="required">*</span></label>
+                <!-- YOU CAN CHANGE THE LABEL TEXT -->
+                <textarea id="message" name="message" placeholder="Explain what is happening..." required></textarea>
+                <!-- YOU CAN CHANGE THE PLACEHOLDER -->
             </div>
 
-            <!-- PRIVACY POLICY SECTION -->
+            <!-- PRIVACY POLICY CHECKBOX -->
             <div class="privacy-wrapper">
                 <input type="checkbox" id="privacy" name="privacy" required>
+                <!-- Checkbox (DO NOT REMOVE "required") -->
+
                 <label for="privacy" class="privacy-text">
-                    I confirm that I have read and accept the <a href="#" target="_blank">Privacy Policy</a>
-                    and authorize the processing of my personal data for the purpose of receiving a quote.
-                    I understand that I may request access, correction, or deletion of my data at any time.
+                    I agree to the <a href="#" target="_blank">Privacy Policy</a>
+                    <!-- YOU CAN CHANGE THE LINK "#" -->
+                    and authorize the processing of my data for support purposes.
+                    <!-- YOU CAN CHANGE THIS TEXT -->
                 </label>
             </div>
 
-            <button type="submit">Submit Request</button> <!-- Submit button -->
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" class="modern-btn">Submit Support Request</button>
+            <!-- YOU CAN CHANGE THE BUTTON TEXT -->
         </form>
     </div>
 </body>
