@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- Declares HTML5 document type -->
+<html lang="en"> <!-- Sets page language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <title>Email Popup Form</title> <!-- Browser tab title -->
+    <link rel="stylesheet" href="style.css"> <!-- Links external CSS file -->
+</head>
+
+<body> <!-- Page body starts -->
+
+    <!-- POPUP OVERLAY (dark background covering the whole screen) -->
+    <div class="popup-overlay" id="popup">
+
+        <!-- POPUP BOX (white centered box) -->
+        <div class="popup-box">
+
+            <!-- CLOSE BUTTON (click to hide popup) -->
+            <span class="close-btn"
+                onclick="document.getElementById('popup').style.display='none'">
+                &times; <!-- Close icon -->
+            </span>
+
+            <h2>Subscribe</h2> <!-- Popup title -->
+            <p class="popup-subtitle">Enter your email to receive updates.</p>
+
+            <!-- POPUP FORM -->
+            <form action="#" method="post"> <!-- Replace "#" with your backend URL -->
+
+                <!-- EMAIL FIELD ONLY -->
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <!-- Red asterisk indicates required field -->
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <!-- PRIVACY POLICY -->
+                <div class="privacy-wrapper">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <!-- Required checkbox -->
+                    <label for="privacy" class="privacy-text">
+                        I agree to the <a href="#" target="_blank">Privacy Policy</a>
+                        and authorize the processing of my data.
+                    </label>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="modern-btn">Subscribe</button>
+
+            </form> <!-- End of form -->
+        </div> <!-- End of popup box -->
+    </div> <!-- End of overlay -->
+
+</body>
+</html>

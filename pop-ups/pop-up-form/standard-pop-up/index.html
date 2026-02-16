@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- Declares that this document uses HTML5 -->
+<html lang="en"> <!-- Sets the page language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Defines character encoding -->
+    <title>Popup Form</title> <!-- Browser tab title -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file -->
+</head>
+
+<body> <!-- Page body starts -->
+
+    <!-- POPUP OVERLAY (dark background covering the whole screen) -->
+    <div class="popup-overlay" id="popup">
+
+        <!-- POPUP BOX (white centered box) -->
+        <div class="popup-box">
+
+            <!-- CLOSE BUTTON (click to hide popup) -->
+            <span class="close-btn"
+                  onclick="document.getElementById('popup').style.display='none'">
+                  &times; <!-- Close icon -->
+            </span>
+
+            <h2>Get in Touch</h2> <!-- Popup title -->
+            <p class="popup-subtitle">Fill in the form and we will contact you shortly.</p>
+
+            <!-- FORM START -->
+            <form action="#" method="post"> <!-- Replace "#" with your backend URL -->
+
+                <!-- NAME FIELD -->
+                <div class="form-group">
+                    <label for="name">Full Name<span class="required">*</span></label>
+                    <!-- Red asterisk indicates required field -->
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+
+                <!-- EMAIL FIELD -->
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <!-- PHONE FIELD -->
+                <div class="form-group">
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Example: 912 345 678">
+                </div>
+
+                <!-- MESSAGE FIELD -->
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
+                </div>
+
+                <!-- PRIVACY POLICY -->
+                <div class="privacy-wrapper">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <!-- Required checkbox -->
+                    <label for="privacy" class="privacy-text">
+                        I agree to the <a href="#" target="_blank">Privacy Policy</a>
+                        and authorize the processing of my data.
+                    </label>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="modern-btn">Send Message</button>
+
+            </form> <!-- FORM END -->
+        </div> <!-- POPUP BOX END -->
+    </div> <!-- POPUP OVERLAY END -->
+
+</body>
+</html>
