@@ -1,0 +1,156 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif; /* MAIN FONT */
+    background: linear-gradient(135deg, #dfe7f3, #f8fafc); /* PAGE BACKGROUND COLORS */
+    margin: 0;
+    padding: 0;
+    color: #333; /* DEFAULT TEXT COLOR */
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    max-width: 650px; /* FORM WIDTH */
+    width: 90%;
+    margin: 60px auto; /* CENTERS THE FORM */
+    background: #ffffff; /* FORM BACKGROUND COLOR */
+    padding: 45px 50px; /* INNER SPACING */
+    border-radius: 18px; /* ROUNDED CORNERS */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.10); /* FORM SHADOW */
+}
+
+/* ===== FORM TITLE ===== */
+h1 {
+    text-align: center;
+    font-size: 30px; /* TITLE SIZE */
+    margin-bottom: 35px;
+    color: #1a3d6f; /* TITLE COLOR */
+    font-weight: 700;
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+    margin-bottom: 22px; /* SPACE BETWEEN FIELDS */
+}
+
+/* ===== LABELS ===== */
+.form-group label {
+    display: block;
+    font-size: 15px; /* LABEL TEXT SIZE */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1a1a1a; /* LABEL COLOR */
+}
+
+/* ===== RED ASTERISK ===== */
+.required {
+    color: #d00; /* ASTERISK COLOR */
+}
+
+/* ===== INPUTS, SELECTS, TEXTAREAS ===== */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px 16px; /* INNER SPACING */
+    font-size: 15px; /* TEXT SIZE */
+    border: 1.5px solid #cfd6e0; /* BORDER COLOR */
+    border-radius: 10px; /* ROUNDED CORNERS */
+    background: #fdfdfd; /* FIELD BACKGROUND COLOR */
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+/* ===== FOCUS EFFECT ===== */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4a90e2; /* BORDER COLOR ON FOCUS */
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.25); /* GLOW EFFECT */
+    outline: none;
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+    min-height: 120px; /* MINIMUM HEIGHT */
+    resize: vertical; /* ALLOWS VERTICAL RESIZING ONLY */
+}
+
+/* ===== PRIVACY POLICY SECTION ===== */
+.privacy-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px; /* SPACE BETWEEN CHECKBOX AND TEXT */
+    margin: 25px 0;
+    padding: 15px;
+    background: #f4f7fb; /* BACKGROUND COLOR */
+    border-radius: 12px;
+    border: 1px solid #d9e2ef; /* BORDER COLOR */
+}
+
+.privacy-wrapper input[type="checkbox"] {
+    margin-top: 4px;
+    width: 20px; /* CHECKBOX SIZE */
+    height: 20px;
+    cursor: pointer;
+}
+
+.privacy-text {
+    font-size: 14px; /* TEXT SIZE */
+    line-height: 1.55;
+    cursor: pointer;
+    color: #333; /* TEXT COLOR */
+}
+
+.privacy-text a {
+    color: #1a3d6f; /* LINK COLOR */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.privacy-text a:hover {
+    text-decoration: underline;
+}
+
+/* ===== BLUE MODERN BUTTON ===== */
+.modern-btn {
+    width: 100%;
+    padding: 16px; /* BUTTON HEIGHT */
+    background: #1a3d6f; /* BUTTON COLOR */
+    color: #ffffff; /* TEXT COLOR */
+    border: none;
+    border-radius: 12px; /* ROUNDED CORNERS */
+    font-size: 18px; /* TEXT SIZE */
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 16px rgba(26, 61, 111, 0.25); /* BUTTON SHADOW */
+    transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+/* ===== BUTTON HOVER ===== */
+.modern-btn:hover {
+    background: #16345c; /* DARKER BLUE ON HOVER */
+    transform: translateY(-3px); /* LIFT EFFECT */
+    box-shadow: 0 10px 22px rgba(26, 61, 111, 0.35);
+}
+
+/* ===== BUTTON CLICK ===== */
+.modern-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(26, 61, 111, 0.25);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px; /* SMALLER PADDING ON MOBILE */
+    }
+
+    h1 {
+        font-size: 24px; /* SMALLER TITLE */
+    }
+
+    .modern-btn {
+        font-size: 16px; /* SMALLER BUTTON TEXT */
+    }
+}
